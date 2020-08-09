@@ -1,0 +1,14 @@
+.navbar {
+    background-color: black;
+    border-bottom: #7DFDFE solid 1px;
+    border-top: #7DFDFE solid 1px;
+}
+
+.navbar-collapse {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
