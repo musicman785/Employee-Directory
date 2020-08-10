@@ -1,0 +1,8 @@
+th {
+    color: #7DFDFE !important;
+    background-color: black !important;
+}
+
+#clickable {
+    cursor: pointer
+}
