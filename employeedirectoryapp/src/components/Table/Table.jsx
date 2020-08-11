@@ -1,36 +1,28 @@
 import React from "react";
-import "./Table.css";
 
-function Table() {
+
+function Table(props) {
     return (
-        <table class="table table-dark">
+        <table className="table table-dark">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
-                    <th scope="col">Last<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
-                    <th scope="col">Handle<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
+                    <th scope="col">Phone<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
+                    <th scope="col">Email<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
+                    <th scope="col">Country<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td scope="row">1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td scope="row">2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td scope="row">3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                {props.users.map(user => (
+                    <tr>
+                        <td><img src={user.picture.medium} alt="user profile" /></td>
+                        <td>{user.name.first} {user.name.last}</td>
+                        <td>{user.phone}</td>
+                        <td>{user.email}</td>
+                        <td>{user.location.country}</td>
+                    </tr>
+                ))}
             </tbody>
         </table >
     )
