@@ -7,15 +7,15 @@ function Table(props) {
             <thead>
                 <tr>
                     <th scope="col">Image</th>
-                    <th scope="col">Name<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
-                    <th scope="col">Phone<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
-                    <th scope="col">Email<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
-                    <th scope="col">Country<span id="clickable"><i className="fa fa-fw fa-sort"></i></span></th>
+                    <th scope="col">Name<span onClick={props.sortedUsers}><i className={props.className} id="name"></i></span></th>
+                    <th scope="col">Phone<span onClick={props.sortedUsers}><i className={props.className} id="phone"></i></span></th>
+                    <th scope="col">Email<span onClick={props.sortedUsers}><i className={props.className} id="email"></i></span></th>
+                    <th scope="col">Country<span onClick={props.sortedUsers}><i className={props.className} id="country"></i></span></th>
                 </tr>
             </thead>
             <tbody>
                 {props.users.map(user => (
-                    <tr>
+                    <tr key={user.phone}>
                         <td><img src={user.picture.medium} alt="user profile" /></td>
                         <td>{user.name.first} {user.name.last}</td>
                         <td>{user.phone}</td>
