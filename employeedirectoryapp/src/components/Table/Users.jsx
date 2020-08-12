@@ -7,13 +7,12 @@ import SearchBar from "../SearchBar/SearchBar"
 class Users extends Component {
 
     state = {
-        users: [],
-        search: ""
+        users: []
     };
 
 
     componentDidMount() {
-        this.searchUsers()
+        this.searchUsers();
     };
 
     searchUsers = () => {
@@ -22,18 +21,11 @@ class Users extends Component {
             .catch(err => console.log(err));
     }
 
-    handleInputChange = event => {
-        const value = event.target.value;
-        const name = event.target.name;
-        this.setState({
-            [name]: value
-        });
-    };
+    // create a method to filter out users and campare to search string
 
-    handleFormSubmit = event => {
-        event.preventDefault()
-        this.searchUsers(this.state.search)
-    };
+
+
+
 
     render() {
         return (
@@ -42,9 +34,7 @@ class Users extends Component {
                     users={this.state.users}
                 />
                 <SearchBar
-                    value={this.state.search}
-                    handleInputChange={this.handleInputChange}
-                    handleFormSubmit={this.handleFormSubmit}
+
                 />
             </div>
         )
