@@ -6,7 +6,7 @@
 
 ![GitHub language count](https://img.shields.io/github/languages/count/musicman785/Employee-Directory?color=%23b22&logo=github&logoColor=%23b22)
 
-[Link to App]()
+[Link to App](https://musicman785.github.io/Employee-Directory/)
 
 Client side application that records Budget transactions.
 
@@ -26,8 +26,8 @@ Client side application that records Budget transactions.
 - [Author](#author)
 kv
 ## Instructions
+> Navigate to https://musicman785.github.io/Employee-Directory/ on your browser. Once on the application go to the search field and begin entering leeters of name being searched. All names with similar letters will be displayed as letters are entered. To go back to all users/employees, simply empty the search field and all names will be displayed again.  
 
-> 
 # Example Gif:
 
 ![](/public/assets/images/EmployeeDirectory.gif)
@@ -35,6 +35,10 @@ kv
 ## Contributors
 
 [musicman785](http://github.com/musicman785)
+
+## Acknowledgements
+
+Inspired by Isabel Iarcones Employee Directory application.
 
 ## Author
 
